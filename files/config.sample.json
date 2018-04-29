@@ -1,0 +1,29 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "<MA:CA:DD:RE:SS:00>",
+        "port": 51826,
+        "pin": "<###-##-###>"
+    },
+
+    "accessories": [
+            {
+                    "accessory": "valorremote",
+                    "name": "Fireplace",
+                    "pin": 11,
+                    "address": "01011101110100001"
+            }
+    ],
+
+    "platforms": [
+            {
+                    "platform": "tcc",
+                    "name" : "Thermostat",
+                    "username" : "<USERNAME>",
+                    "password" : "<PASSWORD>",
+                    "devices" : [
+                            {"deviceID": "<DEVICEID>", "name": "Thermostat"}
+                    ]
+            }
+    ]
+}
