@@ -3,19 +3,19 @@ Homebridge Configuration
 
 Setup
 -----
-1. Install Node
+1. Install Node.JS and npm
+
+        curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+        sudo apt-get install nodejs npm
 
 2. Install Homebridge
 
         sudo apt-get install libavahi-compat-libdnssd-dev
         sudo npm install -g --unsafe-perm homebridge
 
-3. Install Honeywell TCC plugin
+3. Install Honeywell TCC thermostat plugin
 
-        cd /usr/lib/node_modules/homebridge
-        sudo npm install --unsafe-perm mdns
-        sudo npm install homebridge-tcc
-        sudo npm rebuild --unsafe-perm
+        sudo npm install -g homebridge-tcc
 
 4. Set up homebridge directory, user account, and permissions
 
@@ -23,11 +23,13 @@ Setup
         sudo mkdir /var/lib/homebridge
         sudo adduser homebridge gpio
 
-5. Install homebridge system launcher in `/etc/default/homebridge`
+5. Install homebridge system defaults file to `/etc/default/homebridge`
 
-6. Install homebridge config file in `/var/lib/homebridge/config.json`
+6. Install homebridge config file to `/var/lib/homebridge/config.json`
 
-7. Clone valor-fireplace plugin into `/var/lib/homebridge/plugins/homebridge-valor-fireplace`
+7. Clone valor-fireplace plugin into `/var/lib/homebridge/plugins/homebridge-valor-fireplace` and install rpio dependency
+
+        sudo npm install --unsafe-perm --prefix /var/lib/homebridge/plugins/homebridge-valor-fireplace rpio
 
 8. Set permissions
 
