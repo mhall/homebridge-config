@@ -27,9 +27,9 @@ Setup
 
 6. Install homebridge config file to `/var/lib/homebridge/config.json`
 
-7. Clone valor-fireplace plugin into `/var/lib/homebridge/plugins/homebridge-valor-fireplace` and install rpio dependency
+7. Clone Fireplace plugin into `/var/lib/homebridge/plugins/homebridge-fireplace` and install rpio dependency
 
-        sudo npm install --unsafe-perm --prefix /var/lib/homebridge/plugins/homebridge-valor-fireplace rpio
+        sudo npm install --unsafe-perm --prefix /var/lib/homebridge/plugins/homebridge-fireplace rpio
 
 8. Set permissions
 

@@ -8,7 +8,7 @@
 
     "accessories": [
             {
-                    "accessory": "valorremote",
+                    "accessory": "fireplace",
                     "name": "Fireplace",
                     "pin": 11,
                     "address": "01011101110100001"
