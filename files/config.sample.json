@@ -1,29 +1,43 @@
 {
-    "bridge": {
-        "name": "Homebridge",
-        "username": "<MA:CA:DD:RE:SS:00>",
-        "port": 51826,
-        "pin": "<###-##-###>"
-    },
-
-    "accessories": [
+   "bridge": {
+      "name": "Homebridge",
+      "username": "<MA:CA:DD:RE:SS:00>",
+      "port": 51826,
+      "pin": "<###-##-###>"
+   },
+   "accessories": [
+      {
+         "accessory": "fireplace",
+         "name": "Fireplace",
+         "pin": 11,
+         "address": "01011101110100001"
+      },
+      {
+         "accessory": "DummySwitch",
+         "name": "Unlock Door"
+      },
+      {
+         "accessory": "DummySwitch",
+         "name": "Toggle Under Cabinet Light"
+      },
+      {
+         "accessory": "DummySwitch",
+         "name": "Toggle Fireplace"
+      }
+   ],
+   "platforms": [
+      {
+         "platform": "tcc",
+         "name": "Thermostat",
+         "username": "<USERNAME>",
+         "password": "<PASSWORD>",
+         "devices": [
             {
-                    "accessory": "fireplace",
-                    "name": "Fireplace",
-                    "pin": 11,
-                    "address": "01011101110100001"
+               "deviceID": "<DEVICEID>",
+               "name": "Thermostat",
+               "usePermanentHolds": true
             }
-    ],
-
-    "platforms": [
-            {
-                    "platform": "tcc",
-                    "name" : "Thermostat",
-                    "username" : "<USERNAME>",
-                    "password" : "<PASSWORD>",
-                    "devices" : [
-                            {"deviceID": "<DEVICEID>", "name": "Thermostat"}
-                    ]
-            }
-    ]
+         ]
+      }
+   ]
 }
